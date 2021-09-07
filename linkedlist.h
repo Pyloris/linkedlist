@@ -23,6 +23,11 @@ struct node *createlist(struct node *, int);
 void traverse(struct node *);
 struct node *insertafter(struct node *, int, int);
 struct node *insertbefore(struct node *, int, int);
+struct node *deletefirst(struct node *start);
+struct node *deleteonly(struct node *start);
+struct node *deletebetween(struct node *start, int value);
+struct node *deleteatend(struct node *start);
+struct node *reverse(struct node *start);
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -271,7 +276,7 @@ struct node *deleteatend(struct node *start){
 /* +++++++++++++++++++++++++++++ END ++++++++++++++++++++++++++++++++++ */
 
 /*
-function to reverse the linked list
+++++++++++++++++++++++++ function to reverse the linked list ++++++++++++++++++++++++++++++++
 */
 struct node *reverse(struct node *start){
 	// create 3 pointers
